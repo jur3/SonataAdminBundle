@@ -139,7 +139,9 @@ file that was distributed with this source code.
                                                 <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                                             </a>
                                             <ul class="dropdown-menu dropdown-user">
-                                                {% include admin_pool.getTemplate('user_block') %}
+                                                {% if app.user %}
+                                                    {% include admin_pool.getTemplate('user_block') %}
+                                                {% endif %}
                                             </ul>
                                         </li>
                                     </ul>

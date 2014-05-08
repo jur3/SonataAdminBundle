@@ -1,1 +1,9 @@
-{% block user_block %}{# Customize this value #}{% endblock %}
+{% block user_block %}
+        <li>
+            <a href="#"><i class="fa fa-user fa-fw"></i>{{ app.user.username }}</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+        </li>
+{% endblock %}
